@@ -42,8 +42,8 @@
 
 ---
 
-> *Este documento de requisitos define os principais aspectos do Sistema de Gerenciamento de Bibliotecas, fornecendo uma base sólida para o desenvolvimento da solução.
-> Ele reflete as necessidades identificadas pela equipe de análise de requisitos e pelos stakeholders da biblioteca, garantindo que o sistema modernizado atenda às expectativas e desafios enfrentados pela biblioteca municipal.*
+>Este documento de requisitos define os principais aspectos do Sistema de Gerenciamento de Bibliotecas, fornecendo uma base sólida para o desenvolvimento da solução.
+>Ele reflete as necessidades identificadas pela equipe de análise de requisitos e pelos stakeholders da biblioteca, garantindo que o sistema modernizado atenda às expectativas e desafios enfrentados pela biblioteca municipal.
 
 
 
