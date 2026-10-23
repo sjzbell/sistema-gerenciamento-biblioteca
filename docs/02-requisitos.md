@@ -10,8 +10,7 @@
 | **RF2.1** | Pesquisa Pública no Catálogo | O sistema deve disponibilizar um catálogo online acessível aos usuários, onde eles possam pesquisar livros por título, autor, categoria e disponibilidade. | Alta |
 | **RF2.2** | Detalhes e Status do Livro | Os resultados da pesquisa devem mostrar informações detalhadas sobre os livros, incluindo capa, sinopse e disponibilidade. | Média |
 | **RF3.1** | Registro de Empréstimo e Devolução | Deve ser possível aos bibliotecários registrar empréstimos e devoluções de livros no sistema. | Alta |
-| **RF3.2** | Leitura via Código de Barras | O sistema deve permitir a associação de livros a usuários por meio de um leitor de código de barras. | Média |
-| **RF3.3** | Notificação Automática de Prazos | Deve ser gerada uma notificação automática para usuários quando o prazo de devolução se aproximar ou quando um livro estiver atrasado. | Alta |
+| **RF3.2** | Notificação Automática de Prazos | Deve ser gerada uma notificação automática para usuários quando o prazo de devolução se aproximar ou quando um livro estiver atrasado. | Alta |
 | **RF4.1** | Registro Atualizado de Estoque |  O sistema deve manter um registro atualizado do estoque de livros, incluindo informações sobre quantidades disponíveis e quantidades emprestadas. | Média |
 | **RF4.2** | Notificação Automática de Estoque |  Os bibliotecários devem receber notificações quando o estoque de um livro estiver baixo, facilitando a reposição. | Baixa |
 | **RF5.1** | Geração de Relatórios Gerenciais | O sistema deve ser capaz de gerar relatórios sobre o uso da biblioteca, incluindo (empréstimos por período, frequência de leitores e livros mais populares). | Alta |
