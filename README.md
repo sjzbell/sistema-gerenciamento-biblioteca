@@ -23,18 +23,18 @@ Navegue pelos artefatos de requisitos através dos links abaixo:
 2. 📋 [**Especificação de Requisitos (RFs, RNFs, Regra de Negócio e Validação)**](docs/02-requisitos.md)  
    *Detalhamento de todos os Requisitos Funcionais, Requisitos Não Funcionais, Regras de Negócios e Estratégias de Verificação e Validação.*
 
-3. 🗂️ [**Histórias de Usuário e Critérios de Aceitação (BDD)**](docs/03-user-stories.md) *(Em construção)*  
+3. 🗂️ [**Histórias de Usuário e Critérios de Aceitação (BDD)**](docs/03-user-stories.md)  
    *Detalhamento das User Stories no formato ágil acompanhadas dos Critérios de Aceitação em BDD (Gherkin).*
 
-4. 🔗 [**Matriz de Rastreabilidade de Requisitos**](docs/04-matriz-rastreabilidade.md) *(Em construção)*  
-   *Mapeamento e alinhamento entre necessidades de negócio, requisitos, entregáveis e casos de teste.*
+4. 🔗 [**Matriz de Rastreabilidade de Requisitos**](docs/04-matriz-rastreabilidade.md)   
+   *Mapeamento e alinhamento entre necessidades de negócio e requisitos.*
 
 ---
 
 ## 🛠️ Ferramentas Aplicadas
 * **Engenharia de Requisitos:** Markdown, Notion
 * **Versionamento & Portfólio:** GitHub
-* **Modelagem & Processos:** Bizagi (BPMN)
+* **Modelagem & Processos:** Bizagi (BPMN) *(Em construção)*
 
 ---
 
