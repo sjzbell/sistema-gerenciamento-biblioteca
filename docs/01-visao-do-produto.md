@@ -58,3 +58,11 @@
 O diagrama abaixo sintetiza as interações entre os atores operacionais (Bibliotecário) e finais (Leitor) e os limites do Sistema de Gerenciamento de Biblioteca:
 
 ![Diagrama de Casos de Uso](./caso-de-uso.png)
+
+---
+
+## 5. Modelagem de Processos de Negócio (BPMN)
+* **Fluxo de Empréstimo:**
+O diagrama abaixo ilustra o fluxo operacional de atendimento presencial no balcão da biblioteca, detalhando as interações entre o Leitor, a Bibliotecária e o Sistema de Gerenciamento durante a validação de regras de empréstimo:
+
+![Fluxo BPMN de Empréstimo](./bpmn-fluxo-emprestimo.png)
