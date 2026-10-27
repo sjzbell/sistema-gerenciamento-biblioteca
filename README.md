@@ -46,6 +46,12 @@ Para visualizar as interações entre os atores (Cliente, Bibliotecário e TI) e
 
 ---
 
+## 🔄 Fluxo de Processo de Negócio (BPMN)
+* **Fluxo de Empréstimo:**
+![Fluxo BPMN de Empréstimo](./docs/bpmn-fluxo-emprestimo.png)
+
+---
+
 ## 💡 Destaques de Engenharia de Requisitos Aplicados
 
 - **Especificação BDD (Behavior-Driven Development):** Critérios de aceitação escritos em sintaxe Gherkin (*Dado/Quando/Então*) para facilitar a ponte entre regra de negócio e testes automatizados.
