@@ -1,253 +1,262 @@
-# 🗂️ Histórias de Usuário & Critérios de Aceitação (BDD)
+# 🗂️ User Stories e Critérios de Aceitação (BDD)
 
-Este documento traduz os requisitos do **Sistema de Gerenciamento de Bibliotecas** em Histórias de Usuário (*User Stories*) no formato ágil, estruturadas sob a ótica das personas do sistema, acompanhadas dos seus respetivos Critérios de Aceitação na sintaxe **BDD (Behavior-Driven Development / Gherkin)**.
+Este documento traduz os requisitos do **Sistema de Gerenciamento de Biblioteca** em Histórias de Usuário (*User Stories*) no formato ágil, estruturadas sob a ótica das personas do sistema, acompanhadas dos seus respetivos Critérios de Aceitação na sintaxe **BDD (Behavior-Driven Development / Gherkin)**.
 
 ---
 
 ### US01 - Cadastro de Novos Livros
 **Como** bibliotecária chefe (Maria Clara),  
-**Eu quero** cadastrar novos livros no sistema,  
-**Para que** o acervo físico esteja devidamente refletido no sistema e organizado para consulta e empréstimo.
+**Eu quero** cadastrar novos livros no sistema informando título, autor, editora, ano de publicação e quantidade de exemplares,  
+**Para que** o acervo físico esteja devidamente refletido no sistema e disponível para consulta e empréstimo.
 
 * **Requisitos Relacionados:** `RF1.1`
 
 #### Critérios de Aceitação (BDD)
 
 * **Cenário 1: Cadastro de novo livro realizado com sucesso**
-  * **Dado** que a bibliotecária está autenticada no sistema e na tela de "cadastro de livros",
-  * **Quando** preencher os campos obrigatórios (Título, Autor, Editora, Ano de Publicação e Número de Exemplares Disponíveis) e clicar no botão "Salvar",
-  * **Então** o sistema deve registar a nova obra no banco de dados e exibir a mensagem de confirmação: *"Livro Cadastrado Com Sucesso!"*.
+  * **Dado** que a bibliotecária está autenticada no sistema e na tela de "Cadastro de Livros",
+  * **Quando** preencher todos os campos obrigatórios (Título, Autor, Editora, Ano de Publicação e Número de Exemplares Disponíveis) com informações válidas e clicar no botão "Salvar",
+  * **Então** o sistema deve registar o livro no banco de dados, atualizar o acervo em tempo real e exibir a mensagem de confirmação: *"Livro cadastrado com sucesso!"*.
 
 * **Cenário 2: Tentativa de cadastro com campos obrigatórios vazios**
-  * **Dado** que a bibliotecária está na tela de "cadastro de livros",
-  * **Quando** deixar de preencher qualquer campo como "Título", "Autor", "Editora", "Ano de Publicação" e "Número de Exemplares Disponíveis" ao clicar em "Salvar",
-  * **Então** o sistema deve impedir o salvamento e destacar os campos pendentes informando: *"Por favor, preencha todos os campos obrigatórios."*.
+  * **Dado** que a bibliotecária está na tela de "Cadastro de Livros",
+  * **Quando** deixar de preencher qualquer campo obrigatório (Título, Autor, Editora, Ano de Publicação e Número de Exemplares Disponíveis) e clicar no botão "Salvar",
+  * **Então** o sistema deve impedir o salvamento, destacar os campos não preenchidos em vermelho e exibir a mensagem:*"Por favor, preencha todos os campos obrigatórios."*.
+ 
+* **Cenário 3: Tentativa de cadastro com quantidade de exemplares inválida**
+  * **Dado** que a bibliotecária está na tela de "Cadastro de Livros",
+  * **Quando** informar um valor menor ou igual a zero no campo "Quantidade de Exemplares Disponíveis" e clicar em "Salvar",
+  * **Então** o sistema deve impedir o cadastro e exibir a mensagem de erro: "A quantidade de exemplares deve ser de no mínimo 1 unidade.".
 
+---
 
 ### US02 - Edição de Livros
 **Como** bibliotecária Chefe (Maria Clara),  
-**Eu quero** editar e atualizar informações de livros no sistema,  
-**Para que** o acervo físico esteja corretamente atualizado no sistema para consultas e empréstimos.
+**Eu quero** editar e atualizar informações de livros já cadastrados no sistema,  
+**Para que** os dados dos livros permaneçam corretos e o catálogo online reflita com precisão o estado real do acervo.
 
 * **Requisitos Relacionados:** `RF1.2`
 
 #### Critérios de Aceitação (BDD)
 
 * **Cenário 1: Edição e Atualização de livro realizada com sucesso**
-  * **Dado** que a bibliotecária selecionou um livro na tela do sistema,
-  * **Quando** clicar em "Editar" e alterar algum campo como (Título, Autor, Editora, Ano de Publicação e Número de Exemplares Disponíveis) após clicar no botão "Salvar",
-  * **Então** o sistema deve atualizar os dados do livro no banco de dados e exibir a mensagem de confirmação: *"Livro Atualizado Com Sucesso!"*.
+  * **Dado** que a bibliotecária está autenticada no sistema e visualizando a tela de detalhes de um livro cadastrado,
+  * **Quando** clicar no botão "Editar", alterar qualquer informação desejada (Título, Autor, Editora, Ano de Publicação ou Quantidade de Exemplares) e clicar em "Salvar",
+  * **Então** o sistema deve atualizar os dados no banco de dados, refletir as alterações no catálogo online em tempo real e exibir a mensagem de confirmação: "Livro atualizado com sucesso!".
 
-* **Cenário 2: Tentativa de Edição e Atualização com campos obrigatórios vazios**
-  * **Dado** que a bibliotecária selecionou um livro na tela do sistema,
-  * **Quando** clicar em "Editar", apagar um campo como (Título, Autor, Editora, Ano de Publicação e Número de Exemplares Disponíveis) e esquecer de preencher, após clicar no botão "Salvar",
-  * **Então** o sistema deve impedir o salvamento e destacar os campos vazios informando a mensagem: *"Por favor, preencha todos os campos obrigatórios!"*.
+* **Cenário 2: Tentativa de Edição e Atualização com campos obrigatórios em branco**
+  * **Dado** que a bibliotecária está na tela de edição de um livro,
+  * **Quando** apagar o conteúdo de qualquer campo obrigatório (Título, Autor, Editora, Ano de Publicação ou Quantidade de Exemplares) e clicar em "Salvar",
+  * **Então** o sistema deve impedir a atualização, destacar os campos vazios em vermelho e exibir a mensagem: "Por favor, preencha todos os campos obrigatórios.".
+ 
+* **Cenário 3: Cancelamento da edição sem salvar alterações**
+  * **Dado** que a bibliotecária alterou dados no formulário de edição de um livro,
+  * **Quando** clicar no botão "Cancelar",
+  * **Então** o sistema deve descartar todas as modificações realizadas e retornar à tela de detalhes da obra mantendo os dados originais inalterados.
 
 ---
 
-### US03 - Pesquisa Pública no Catálogo
-**Como** leitor (Lucas Andrade),  
-**Eu quero** pesquisar livros por título, autor ou categoria,  
-**Para que** eu possa verificar se a obra desejada está disponível antes de me deslocar à biblioteca.
+### US03 - Cadastro e Gestão de Leitores
+**Como** bibliotecária chefe (Maria Clara),  
+**Eu quero** cadastrar, editar e consultar os dados dos leitores e emitir o código da sua carteirinha,  
+**Para que** os frequentadores estejam habilitados a realizar empréstimos e a biblioteca mantenha o controle de acessos.
 
-* **Requisitos Relacionados:** `RF2.1` 
+* **Requisitos Relacionados:** `RF1.3`
+* **Requisito Não-Funcional Relacionado:** RNF04 (Segurança/Acesso por Perfil)
+
 
 #### Critérios de Aceitação (BDD)
 
-* **Cenário 1: Pesquisa por título com exemplares disponíveis**
-  * **Dado** que o leitor acede à página pública do catálogo online,
-  * **Quando** digitar o (título, autor ou categoria) no campo de pesquisa e acionar o botão "Buscar",
-  * **Então** o sistema deve apresentar uma lista de resultados contendo a capa, o título, o autor, categoria e a mensagem de disponibilidade. *"Disponível para Empréstimo"*.
- 
- * **Cenário 2: Pesquisa por título com exemplares indisponíveis**
-  * **Dado** que o leitor acede à página pública do catálogo online,
-  * **Quando** digitar o (título, autor ou categoria) no campo de pesquisa, acionar o botão "Buscar" e não tiver estoque disponível,
-  * **Então** o sistema deve apresentar uma mensagem de indisponibilidade. *"Indisponível"*.
- 
-### US04 - Detalhes e Status do Livro
+* **Cenário 1: Cadastro de novo leitor realizado com sucesso**
+  * **Dado** que a bibliotecária está autenticada no módulo administrativo,
+  * **Quando** preencher os campos obrigatórios (Nome, CPF, E-mail e Telefone) com dados válidos e clicar em "Salvar",
+  * **Então** o sistema deve salvar o registro no banco de dados, gerar automaticamente um código único para a carteirinha do leitor e exibir a mensagem: "Leitor cadastrado com sucesso!".
+
+* **Cenário 2: Consulta e edição de dados do leitor**
+  * **Dado** que a bibliotecária pesquisa pelo CPF ou nome de um leitor existente,
+  * **Quando** selecionar o leitor, alterar um dado cadastral (ex: Telefone) e clicar em "Atualizar",
+  * **Então** o sistema deve salvar as novas informações e exibir a confirmação: "Cadastro atualizado com sucesso!".
+
+* **Cenário 3: Tentativa de cadastro com CPF já existente**
+  * **Dado** que a bibliotecária preenche o formulário de cadastro de leitor,
+  * **Quando** informar um CPF já cadastrado no banco de dados e clicar em "Salvar",
+  * **Então** o sistema deve impedir o registro e exibir o alerta: "CPF já cadastrado no sistema.".
+
+---
+
+### US04 - Pesquisa Pública no Catálogo
 **Como** leitor (Lucas Andrade),  
-**Eu quero** pesquisar livros,  
-**Para que** eu possa verificar os detalhes sobre o livro e seu status de disponibilidade no sistema.
+**Eu quero** pesquisar livros por título, autor, categoria ou disponibilidade no catálogo online, 
+**Para que** eu saiba se a obra desejada está no acervo antes de me deslocar fisicamente à biblioteca.
+
+* **Requisitos Relacionados:** `RF2.1`
+* **Requisitos Não-Funcionais Relacionados:** RNF02 (Usabilidade), RNF03 (Tempo de resposta < 2s), RNF05 (Disponibilidade 99,5%)
+
+#### Critérios de Aceitação (BDD)
+
+* **Cenário 1: Pesquisa por filtro com resultados encontrados**
+  * **Dado** que o leitor acede à página pública do catálogo online,
+  * **Quando** digitar um termo no campo de busca (ex: título, autor ou categoria) e acionar "Buscar",
+  * **Então** o sistema deve processar a busca em menos de 2 segundos (RNF03) e apresentar a lista de livros correspondentes contendo capa, título, autor, categoria e status de disponibilidade.
+ 
+* **Cenário 2: Pesquisa sem resultados correspondentes**
+  * **Dado** que o leitor pesquisa por um título ou autor inexistente no acervo,
+  * **Quando** acionar a busca,
+  * **Então** o sistema deve exibir a mensagem: "Nenhum livro encontrado para o termo pesquisado. Tente buscar por outra palavra-chave.".
+
+---
+ 
+### US05 - Detalhes e Status do Livro
+**Como** leitor (Lucas Andrade),  
+**Eu quero** visualizar a página de detalhes do livro contendo capa, sinopse e disponibilidade, 
+**Para que** eu possa avaliar o conteúdo da obra e confirmar a sua presença no acervo.   
 
 * **Requisitos Relacionados:** `RF2.2` 
 
-* **Cenário 1: Visualização de detalhes e status do livro**
-  * **Dado** que o leitor visualiza os resultados de uma pesquisa,
-  * **Quando** clicar sobre um livro específico,
-  * **Então** o sistema deve abrir a página de detalhes exibindo a capa, a sinopse completa e a sua disponibilidade na biblioteca com *"Disponível para Empréstimo" ou "Indisponível"*.
+* **Cenário 1: Visualização de detalhes da obra**
+  * **Dado** que o leitor visualiza os resultados de uma busca no catálogo,
+  * **Quando** clicar sobre a foto ou título de um livro específico,
+  * **Então** o sistema deve abrir a página de detalhes exibindo a imagem da capa, a sinopse completa, dados técnicos (editora, ano) e a tag de status "Disponível para Empréstimo" ou "Indisponível".
 
 ---
 
-### US05 - Registro de Empréstimo e Devolução
+### US06 - Registro de Empréstimo e Devolução via Código de Barras
 **Como** bibliotecária chefe (Maria Clara),  
-**Eu quero** registrar empréstimo de livros buscando pelo (título e autor) e associando a carteira do leitor,  
-**Para que** o atendimento no balcão seja preciso.
+**Eu quero** registrar empréstimos e devoluções bipando os códigos de barras do livro e da carteirinha,
+**Para que** o atendimento no balcão seja ágil, preciso e respeite as regras operacionais da biblioteca.
 
 * **Requisitos Relacionados:** `RF3.1`
+* **Requisitos Não-Funcionais Relacionados:** RNF01 (Usabilidade), RNF06 (Leitor USB Plug and Play)
+* **Regras de Negócio Aplicadas:** RN01 (Máx. 3 livros), RN02 (Prazo 14 dias), RN03 (Bloqueio por atraso)
 
 #### Critérios de Aceitação (BDD)
 
-* **Cenário 1: Empréstimo realizado com sucesso**
-  * **Dado** que o leitor possui menos de 3 livros emprestados e nenhuma pendência por atraso,
-  * **Quando** a bibliotecária inserir as informações do livro e da carteira do leitor,
-  * **Então** o sistema deve apresentar uma lista de resultados contendo a (capa, título, autor, categoria e a mensagem de disponibilidade) *"Disponível para Empréstimo" ao clicar em "Realizar um empréstimo" o sistema deve registrar o empréstimo vinculando o livro ao leitor e definir a data limite para devolução em 14 dias corridos a partir da data atual, exibindo a mensagem de confirmação "Empréstimo realizado com sucesso! Data de Devolução: DD/MM/AAAA".
+* **Cenário 1: Empréstimo realizado com sucesso via leitor de código de barras**
+  * **Dado** que o leitor possui menos de 3 livros emprestados (RN01) e nenhuma pendência por atraso (RN03),
+  * **Quando** a bibliotecária bipar o código de barras da carteirinha e o código do exemplar com o leitor USB (RNF06),
+  * **Então** o sistema deve vincular o livro ao leitor, calcular a data de devolução em 14 dias corridos (RN02) e exibir a mensagem: "Empréstimo registrado com sucesso! Data limite: DD/MM/AAAA".
 
-* **Cenário 2: Devolução realizada com sucesso**
-  * **Dado** que o leitor entrega o livro no balcão de atendimento,
-  * **Quando** a bibliotecária preencher o código da carteira do leitor e selecionar o livro devolvido,
-  * **Então** o sistema deve registrar a devolução alterando o status do livro para "Disponível", liberar o limite de empréstimo do leitor, atualizar o número de livros disponíveis e exibir a mensagem: *"Devolução realizada com sucesso!"*.
+* **Cenário 2: Impedimento de empréstimo por limite máximo atingido (RN01)**
+  * **Dado** que o leitor já possui 3 livros emprestados ativos,
+  * **Quando** a bibliotecária bipar a carteirinha e tentar registrar o 4º exemplar,
+  * **Então** o sistema deve bloquear a operação e exibir o alerta: "Limite atingido. O leitor já possui 3 livros emprestados.".
 
-* * **Cenário 3: Devolução realizada em atraso**
-  * **Dado** que o leitor entrega um livro cuja data de devolução está vencida (passou dos 14 dias),
-  * **Quando** a bibliotecária preencher o código da carteira do leitor e selecionar o livro devolvido,
-  * **Então** o sistema deve registrar a devolução do livro, calcular o valor da multa com base nos dias de atraso (R$8,50/dia), aplicar a pendência no cadastro do leitor bloqueando novos empréstimos e exibir na tela o valor da multa total com a mensagem:*"Devolução realizada com pendência financeira no valor de R$X,XX"*.
- 
-* * **Cenário 4: Bloqueio por limite de empréstimos atingidos**
-  * **Dado** que o leitor já possui 3 livros emprestados simultaneamente,
-  * **Quando** a bibliotecária tentar registrar um novo empréstimo para este leitor,
-  * **Então** o sistema deve impedir a transação e exibir a mensagem de erro: *"Limite máximo atingido: O leitor já possui 3 livros emprestados!"*.
- 
-* * **Cenário 5: Bloqueio por atraso pendente**
-  * **Dado** que o leitor possui pelo menos 1 livro com devolução em atraso,
-  * **Quando** a bibliotecária tentar registrar um novo empréstimo para este leitor,
-  * **Então** o sistema deve impedir a transação e exibir o alerta *"Empréstimo não permitido: O leitor possui pendências por atraso a regularizar."*.
+* **Cenário 3: Impedimento de empréstimo por devolução em atraso (RN03)**
+  * **Dado** que o leitor possui pelo menos 1 livro com data de devolução vencida,
+  * **Quando**a bibliotecária bipar a carteirinha do leitor no balcão,
+  * **Então**o sistema deve interromper a transação e exibir o alerta: "Empréstimo não permitido: Leitor possui pendências por atraso.".
+    
+* **Cenário 4: Registro de devolução realizada com sucesso**
+  * **Dado** que o leitor entrega um livro no balcão de atendimento,
+  * **Quando**a bibliotecária bipar o código de barras do livro na tela de devolução,
+  * **Então** o sistema deve dar baixa no empréstimo, atualizar o status do livro para "Disponível" e exibir a confirmação: "Devolução concluída com sucesso!".
 
-### US06 - Notificações Automáticas de Prazos
+---
+
+### US07 - Notificação Automática de Prazos
 **Como** leitor (Lucas Andrade),  
-**Eu quero** receber notificações automáticas sobre o prazo de devolução dos meus livros,  
-**Para que** eu possa devolvê-los ou renová-los a tempo, evitando multas e pendências.
+**Eu quero** receber notificações automáticas sobre o vencimento dos meus empréstimos,  
+**Para que** eu possa devolver o livro no prazo e evitar bloqueios na biblioteca.
 
 * **Requisitos Relacionados:** `RF3.2`
-* **Regra de Negócio Relacionada:** `RN02` (Prazo 14 dias), `RN03` (Penalidade por atraso)
+* **Regra de Negócio Relacionada:** `RN02` (Prazo de Devolução), `RN03` (Penalidades)
 
 #### Critérios de Aceitação (BDD)
 
-* **Cenário 1: Notificação de lembrete prévio (Prazo se aproximando)**
-  * **Dado** que o leitor possui um empréstimo ativo e faltam 2 dias para atingir o prazo limite de devolução (14 dias),
-  * **Quando** o sistema rodar a verificação diária de prazos,
-  * **Então** o sistema deve enviar uma notificação automática (e-mail, whatsapp, sms e app) para o leitor, a mensagem deve conter (título do livro, a data limite de devolução e o lembrete para devolução ou renovação) como: *"O prazo de devolução do livro [Título do Livro] está próximo do fim: [DD/MM/AAAA]. Por favor, faça a devolução ou realize a renovação a tempo para evitar a aplicação de multas e o bloqueio de novos empréstimos."*.
+* **Cenário 1: Envio de lembrete de vencimento próximo**
+  * **Dado** que faltam 2 dias para expirar o prazo de 14 dias de um empréstimo (RN02),
+  * **Quando** o sistema rodar a rotina automática diária de verificação,
+  * **Então** deve disparar um e-mail de notificação para o leitor informando: "Lembrete: O prazo de devolução do livro [Título] vence em DD/MM/AAAA.".
 
-* **Cenário 2: Notificação de atraso (Livro vencido)**
-  * **Dado** que a data limite de devolução de um empréstimo foi ultrapassada,
-  * **Quando** o sistema rodar a verificação diária de prazos,
-  * **Então** o sistema deve enviar uma notificação automática de alerta para o leitor e a mensagem deve informar que o livro está em atraso e que novos empréstimos estão bloqueados até a regularização.
- 
-* **Cenário 3: Frequência de lembrete para empréstimos em atraso**
-  * **Dado** que o leitor já recebeu o primeiro alerta de atraso e o livro ainda não foi devolvido,
-  * **Quando** se passarem 3 dias do último alerta sem a devolução do livro,
-  * **Então** o sistema deve reenviar a notificação de cobrança pendente.
+* **Cenário 2: Envio de aviso de atraso e pendência ativada**
+  * **Dado** que a data limite de devolução expirou sem a entrega da obra,
+  * **Quando** o sistema identificar o atraso,
+  * **Então** deve enviar um alerta para o leitor ("Empréstimo em Atraso") e atualizar o status do cadastro para pendente (RN03).
     
 ---
 
-### US07 - Registro Atualizado de Estoque
+### US08 - Renovação Online de Empréstimo
+**Como** leitor (Lucas Andrade),
+**Eu quero** renovar o prazo de devolução de um livro diretamente pelo catálogo online,
+**Para que**eu possa estender o meu tempo de leitura sem precisar ir presencialmente à biblioteca.
+
+* **Requisitos Relacionados:** `RF3.3`
+* **Regras de Negócio Aplicadas:** RN03 (Sem atrasos), RN04 (Regra de Renovação)
+  
+#### Critérios de Aceitação (BDD)
+
+* **Cenário 1: Renovação online realizada com sucesso**
+  * **Dado** que o leitor acede à sua área logada, não possui devoluções em atraso e é a 1ª renovação da obra (RN04),
+  * **Quando** clicar no botão "Renovar Empréstimo" ao lado do livro,   
+  * **Então** o sistema deve estender a data limite por mais 14 dias corridos e exibir a confirmação: "Renovação realizada com sucesso! Nova data de devolução: DD/MM/AAAA.".
+
+* **Cenário 2: Impedimento por limite de renovações atingido (RN04)**
+  * **Dado** que o leitor já realizou 1 renovação prévia para o mesmo empréstimo,
+  * **Quando** tentar clicar no botão "Renovar Empréstimo" novamente,
+  * **Então** o sistema deve desabilitar a ação e exibir a mensagem: "Limite de 1 renovação já atingido para este empréstimo.".
+
+---
+
+### US09 - Registro Atualizado de Estoque
 **Como** bibliotecária chefe (Maria Clara),  
-**Eu quero** manter um registro atualizado do estoque de livros incluindo informações sobre (quantidades disponíveis e quantidades emprestadas),
-**Para que** a biblioteca possa ter um controle em tempo real do que entra e do que sai.
+**Eu quero** que o sistema mantenha o controle em tempo real da quantidade de livros disponíveis e emprestados,
+**Para que** eu tenha precisão sobre a localização e volume do acervo físico.
 
 * **Requisitos Relacionados:** `RF4.1`
   
 #### Critérios de Aceitação (BDD)
 
-* **Cenário 1: Consulta do estoque em tempo real**
-  * **Dado** que a bibliotecária está na tela de consulta do acervo,
-  * **Quando** buscar por um livro específico,
-  * **Então** o sistema deve exibir o total de exemplares cadastrados, a quantidade disponível para empréstimo e a quantidade atualmente emprestada.
- 
-* **Cenário 2: Atualização automática do estoque ao realizar um empréstimo**
-  * **Dado** que o livro possui N exemplares disponíveis para empréstimo,
-  * **Quando** um exemplar desse livro for emprestado com sucesso,
-  * **Então** o sistema deve decrementar em 1 a quantidade de exemplares disponíveis e incrementar em 1 a quantidade de exemplares emprestados.
- 
-* **Cenário 3: Atualização automática do estoque ao realizar uma devolução**
-  * **Dado** que um exemplar de um livro está com status emprestado,
-  * **Quando** a devolução desse exemplar for registrada com sucesso,
-  * **Então** o sistema deve incrementar em 1 a quantidade de exemplares disponíveis e decrementar em 1 a quantidade de exemplares emprestados.
- 
-* **Cenário 4: Exibição de alerta para livro sem estoque disponível**
-  * **Dado** que todos os exemplares de um livro estão atualmente emprestados (quantidade disponível igual a 0),
-  * **Quando** a bibliotecária consultar esse livro no acervo,
-  * **Então** o sistema deve exibir o status "Sem exemplares disponíveis para empréstimo." e indicar a data prevista para a devolução mais próxima.
+* **Cenário 1: Atualização de estoque no empréstimo e devolução**
+  * **Dado** que um livro possui N exemplares disponíveis no sistema,
+  * **Quando** for registrado um novo empréstimo ou uma nova devolução,
+  * **Então**o sistema deve subtrair 1 unidade do estoque disponível no empréstimo (ou somar 1 unidade na devolução) instantaneamente no banco de dados.
+
+ ---
   
-### US08 - Notificações automáticas de estoque
+### US10 - Notificação Automática de Estoque Baixo
 **Como** bibliotecária chefe (Maria Clara),  
-**Eu quero** receber notificações automáticas quando o estoque de um livro estiver baixo (apenas 1 disponível),
-**Para que** possa facilitar a reposição do estoque.
+**Eu quero** receber notificações automáticas quando o estoque de um livro atingir o limite mínimo,
+**Para que** a gestão possa providenciar a compra ou reposição de novos exemplares.
 
 * **Requisitos Relacionados:** `RF4.2`
 
 #### Critérios de Aceitação (BDD)
 
-* **Cenário 1: Disparo do alerta quando o estoque atinge o limite mínimo**
-  * **Dado** que o livro possui 2 ou mais exemplares disponíveis no acervo,
-  * **Quando** um empréstimo for realizado e a quantidade de exemplares disponíveis cair para 1,
-  * **Então** o sistema deve gerar automaticamente um alerta de "Estoque Baixo" e enviar uma notificação para a bibliotecária chefe contendo (título do livro, autor e a quantidade restante "1 exemplar").
- 
-* **Cenário 2: Visualização dos alertas de estoque baixo no painel/sistema**
-  * **Dado** que existem livros com apenas 1 exemplar disponível,
-  * **Quando** a bibliotecária acessar o painel de gerenciamento de estoque ou central de notificações,
-  * **Então** o sistema deve listar os títulos que estão com o status de "Estoque Baixo" e disponibilizar a opção para marcar a notificação como lida ou iniciar o processo de reposição.
- 
-* **Cenário 3: Não duplicar notificações para o mesmo livro**
-  * **Dado** que um alerta de estoque baixo já foi emitido para um determinado livro e continua não resolvido,
-  * **Quando** a bibliotecária consultar o painel ou realizar outras ações no sistema,
-  * **Então** o sistema não deve gerar novas notificações duplicadas para o mesmo livro até que o estoque seja reposto.
- 
-* **Cenário 4: Remoção do alerta após a reposição do estoque**
-  * **Dado** que um livro está com o alerta de "Estoque Baixo" ativo (1 exemplar),
-  * **Quando** a bibliotecária cadastrar novos exemplares desse livro no sistema, aumentando a quantidade disponível para 2 ou mais,
-  * **Então** o sistema deve atualizar o status do livro para "Estoque Normal" e remover o título da lista de alertas pendentes de reposição.
+* **Cenário 1: Disparo do alerta de estoque mínimo**
+  * **Dado** que a quantidade de exemplares disponíveis de um livro chega a 1 unidade,
+  * **Quando** o último empréstimo for confirmado,
+  * **Então** o sistema deve gerar um alerta no painel da bibliotecária com a mensagem: "Atenção: O livro [Título] atingiu o estoque mínimo de segurança.".
 
 ---
 
-### US09 - Geração de relatórios gerenciais
+### US11 - Geração de Relatórios Gerenciais
 **Como** bibliotecária chefe (Maria Clara),  
-**Eu quero** gerar relatórios com dados de (empréstimos por período, frequência de leitores e livros mais populares)
-**Para que** possa analisar os padrões de uso da biblioteca e tomar decisões assertivas sobre aquisição de novos acervos e planejamento de atendimento.
+**Eu quero** gerar relatórios estatísticos sobre o uso da biblioteca (empréstimos por período, leitores assíduos e livros populares),
+**Para que** eu possa apresentar dados concretos à gestão para tomada de decisões.
 
 * **Requisitos Relacionados:** `RF5.1`
+* **Requisito Não-Funcional Relacionado:** RNF04 (Segurança por perfil)
 
 #### Critérios de Aceitação (BDD)
 
-* **Cenário 1: Filtro e geração do relatório de empréstimos por período**
-  * **Dado** que a bibliotecária está na tela de relatórios, 
-  * **Quando** selecionar o tipo "Empréstimos por Períodos", informar uma data inicial e uma data final e clicar em "Gerar Relatório",
-  * **Então** o sistema deve listar o total de empréstimos realizador no intervalo selecionado, detalhando (data, título do livro e leitor).
-
-* **Cenário 2: Relatório de livros mais populares**
-  * **Dado** que a bibliotecária acessa a aba de estatísticas,
-  * **Quando** solicitar o relatório de "Livros Mais Populares", 
-  * **Então** o sistema deve exibir uma lista ordenada dos livros mais emprestados no período selecionado, informando a quantidade total de locações de cada obra.
+* **Cenário 1: Geração de relatório de circulação por período**
+  * **Dado** que a bibliotecária está autenticada no módulo de relatórios, 
+  * **Quando** selecionar o tipo de relatório (Empréstimos por Período), definir a data inicial/final e clicar em "Gerar",
+  * **Então** o sistema deve compilar os dados e exibir a lista analítica contendo total de empréstimos, devoluções no prazo e devoluções com atraso.
+    
+---
  
-* **Cenário 3: Exportação do relatório**
-  * **Dado** que um relatório foi gerado na tela com sucesso,
-  * **Quando** a bibliotecária clicar no botão "Exportar",
-  * **Então** o sistema deve permitir o download do relatório nos formatos PDF ou CSV/Excel.
- 
- ### US10 - Consulta de Relatórios Gerenciais
+### US12 - Consulta e Exportação de Relatórios Gerenciais
 **Como** bibliotecária chefe (Maria Clara),  
-**Eu quero** acessar e consultar uma central de relatórios gerenciais no sistema,
-**Para que** eu possa acompanhar os indicadores da biblioteca a qualquer momento e tomar decisões embasadas sem complicação.
+**Eu quero** consultar e exportar os relatórios gerenciais diretamente na tela do sistema,
+**Para que** eu compartilhe as informações operacionais de forma simples.
 
 * **Requisitos Relacionados:** `RF5.2`
 
 #### Critérios de Aceitação (BDD)
 
-* **Cenário 1: Acesso ao painel central de relatórios**
-  * **Dado** que a bibliotecária está autenticada no sistema com perfil autorizado, 
-  * **Quando** acessar o menu "Relatórios Gerenciais",
-  * **Então** o sistema deve exibir uma lista com todos os relatórios disponíveis (Empréstimos por Período/Livros Mais Populares/Leitores Inativos/Estoque/Avarias).
- 
- * **Cenário 2: Aplicar filtros na consulta do relatório**
-  * **Dado** que a bibliotecária selecionou um relatório para consulta, 
-  * **Quando** informar um intervalo de datas (Data Início e Data Fim) e clicar em "Buscar",
-  * **Então** o sistema deve atualizar a visualização em tela trazendo apenas os dados correspondentes ao período selecionado.
+* **Cenário 1: Consulta de relatório na tela**
+  * **Dado** que um relatório gerencial foi gerado com sucesso,
+  * **Quando** a bibliotecária selecionar a opção de visualização,
+  * **Então** o sistema deve organizar os dados em tabelas amigáveis na tela permitindo ordenação por coluna.
 
-* **Cenário 3: Restrição de acesso por perfil (Segurança/Autorização)**
-  * **Dado** que um leitor está logado no sistema, 
-  * **Quando** tentar acessar a URL ou o menu de "Relatório Gerenciais",
-  * **Então** o sistema deve negar o acesso e exibir a mensagem de erro: *"Acesso restrito a bibliotecários e administradores."*.
- 
- * **Cenário 4: Consulta sem resultados para o período**
-  * **Dado** que a bibliotecária consulta um relatório em um período sem movimentações registradas, 
-  * **Quando** disparar a busca,
-  * **Então**o sistema deve manter a estrutura da tabela/painel e exibir a mensagem:*"Nenhum registro encontrado para o período selecionado."*.
