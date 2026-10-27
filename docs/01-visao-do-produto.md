@@ -1,11 +1,11 @@
-# Visão do Produto, Declaração do Problema e Personas.
+# 🚀 Visão do Produto e Personas
 
 ## 1. Declaração do Problema:
 
-| O problema | Quem é afetado | O impacto | Uma boa solução |
+| Problema | Afetados | Impacto | Solução |
 | :--- | :--- | :--- | :--- |
-| Processos manuais e um sistema legado obsoleto. | Os bibliotecários e funcionários da Biblioteca Municipal. | Lentidão no atendimento, erros no controle de estoque de livros, perda de prazos de devolução e dificuldades na localização de obras no acervo. | Um sistema moderno de gerenciamento que automatize empréstimos/devoluções com código de barras, atualize o estoque em tempo real e forneça métricas operacionais. |
-| Falta de acesso remoto ao acervo público. | Os leitores e frequentadores da comunidade. | Deslocamentos desnecessários até a biblioteca sem a garantia de disponibilidade da obra desejada. | Um catálogo online acessível via web, permitindo consultas prévias por título, autor, categoria e status do livro. |
+| Processos manuais e um sistema legado obsoleto. | Os bibliotecários. | Lentidão no atendimento, erros no controle de estoque de livros, perda de prazos de devolução e dificuldades na localização de obras no acervo. | Um sistema moderno de gerenciamento que automatize empréstimos/devoluções com código de barras, atualize o estoque em tempo real e forneça métricas operacionais. |
+| Falta de acesso remoto ao acervo público. | Os leitores e frequentadores da biblioteca. | Deslocamentos desnecessários até a biblioteca sem a garantia de disponibilidade da obra desejada. | Um catálogo online acessível via web, permitindo consultas prévias por título, autor, categoria e status do livro. |
 
 ---
 ## 2. Objetivos do Produto
@@ -17,6 +17,11 @@
   * Disponibilizar um catálogo online amigável para pesquisa pública de acervo em tempo real.
   * Automatizar alertas e notificações sobre prazos de devolução pendentes e estoque baixo.
   * Gerar relatórios estatísticos para apoiar decisões de compras e reposição de livros.
+ 
+ ### 2.1 Fora do Escopo (Fase 1)
+- Venda ou e-commerce de livros físicos/digitais.
+- Empréstimo de e-books / acervo digital (DRM).
+- Integração com redes de bibliotecas de outros municípios nesta versão inicial.
 
 ---
 
@@ -45,3 +50,11 @@
 * **Dores:**
   * Perder tempo indo até a biblioteca física para descobrir que o livro necessário já foi emprestado.
   * Esquecer a data de devolução por falta de aviso preventivo.
+
+---
+
+## 4. Escopo Visual: Diagrama de Casos de Uso (UML)
+
+O diagrama abaixo sintetiza as interações entre os atores operacionais (Bibliotecário) e finais (Leitor) e os limites do Sistema de Gerenciamento de Biblioteca:
+
+![Diagrama de Casos de Uso](./caso-de-uso.png)
