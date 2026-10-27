@@ -1,16 +1,23 @@
-# Sistema de Gerenciamento de Biblioteca (SGB)
-> **Estudo de Caso:** Levantamento e Engenharia de Requisitos de Software
+![Status](https://img.shields.io/badge/Status-Em%20Andamento-orange)
+![Metodologia](https://img.shields.io/badge/Metodologia-%C3%81gil%20%20-blue)
+![UML](https://img.shields.io/badge/Modelagem-UML-black)
+![Markdown](https://img.shields.io/badge/Documenta%C3%A7%C3%A3o-Markdown-000000?)
 
----
+
+# Sistema de Gerenciamento de Biblioteca (SGB)
 
 ## 📌 Visão Geral do Projeto
-Este repositório contém a documentação completa de engenharia de requisitos para a modernização do **Sistema de Gerenciamento da Biblioteca Municipal**. O projeto foi estruturado para resolver os problemas operacionais decorrentes de um sistema legado obsoleto, melhorando a eficiência no gerenciamento de livros, oferecendo aos usuários um catálogo online e automatizando processos de empréstimo e devolução sem interromper as operações da biblioteca. 
+
+Este repositório contém a documentação completa de engenharia de requisitos para a modernização do **Sistema de Gerenciamento da Biblioteca Municipal (SGB)**. O projeto foi estruturado para substituir um sistema legado obsoleto e resolver gargalos operacionais, atendendo diretamente a dois perfis de usuários:
+
+* **Equipe da Biblioteca (Bibliotecários e Funcionários):** Otimizando a rotina de atendimento com automação de empréstimos e devoluções via leitura de código de barras, gestão automatizada de estoque e relatórios gerenciais.
+* **Leitores e Frequentadores:** Proporcionando autonomia através de um catálogo online responsivo para consulta em tempo real de disponibilidade de obras, sinopses e recebimento de alertas de prazos.
 
 ---
 
-## 🔍 Desafio de Negócio & Solução
+## 🔍 Desafio de Negócio e Solução
 * **O Desafio:** A biblioteca enfrentava lentidão no registo de empréstimos e devoluções, falta de controle efetivo de estoque e ausência de um meio digital para que os leitores pudessem consultar a disponibilidade de livros sem se deslocarem fisicamente.
-* **A Solução:** Um sistema moderno e automatizado com suporte para leitura de código de barras, notificações automáticas de prazos, gestão de estoque em tempo real, emissão de relatórios estatísticos e um catálogo online responsivo.
+* **A Solução:** Um sistema moderno e automatizado com notificações automáticas de prazos, gestão de estoque em tempo real, emissão de relatórios estatísticos e um catálogo online responsivo.
 
 ---
 
@@ -31,10 +38,25 @@ Navegue pelos artefatos de requisitos através dos links abaixo:
 
 ---
 
+## 📐 Modelagem de Caso de Uso (UML)
+
+Para visualizar as interações entre os atores (Cliente, Bibliotecário e TI) e o escopo do sistema, confira o diagrama abaixo:
+
+![Diagrama de Casos de Uso](./docs/caso-de-uso.png)
+
+---
+
+## 💡 Destaques de Engenharia de Requisitos Aplicados
+
+- **Especificação BDD (Behavior-Driven Development):** Critérios de aceitação escritos em sintaxe Gherkin (*Dado/Quando/Então*) para facilitar a ponte entre regra de negócio e testes automatizados.
+- **Rastreabilidade End-to-End:** Matriz mapeando cada Necessidade de Negócio -> Requisito Funcional -> User Story -> Regras de Negócio.
+
+---
+
 ## 🛠️ Ferramentas Aplicadas
-* **Engenharia de Requisitos:** Markdown, Notion
+* **Engenharia de Requisitos:** Markdown
 * **Versionamento & Portfólio:** GitHub
-* **Modelagem & Processos:** Bizagi (BPMN) *(Em construção)*
+* **Modelagem & Processos:** Draw.io (UML), Bizagi (BPMN - em andamento)
 
 ---
 
