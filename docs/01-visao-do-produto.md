@@ -4,14 +4,14 @@
 
 | Problema | Afetados | Impacto | Solução |
 | :--- | :--- | :--- | :--- |
-| Processos manuais e um sistema legado obsoleto. | Os bibliotecários. | Lentidão no atendimento, erros no controle de estoque de livros, perda de prazos de devolução e dificuldades na localização de obras no acervo. | Um sistema moderno de gerenciamento que automatize empréstimos/devoluções com código de barras, atualize o estoque em tempo real e forneça métricas operacionais. |
-| Falta de acesso remoto ao acervo público. | Os leitores e frequentadores da biblioteca. | Deslocamentos desnecessários até a biblioteca sem a garantia de disponibilidade da obra desejada. | Um catálogo online acessível via web, permitindo consultas prévias por título, autor, categoria e status do livro. |
+| Processos manuais e um sistema legado obsoleto | Bibliotecários (funcionários) | Lentidão no atendimento, erros no controle de estoque de livros, perda de prazos de devolução e dificuldades na localização de obras no acervo | Um sistema moderno de gerenciamento que automatize empréstimos/devoluções com código de barras, atualize o estoque em tempo real e forneça métricas operacionais |
+| Falta de acesso remoto ao acervo público | Usuários (leitores e frequentadores) | Deslocamentos desnecessários até a biblioteca sem a garantia de disponibilidade da obra desejada | Um catálogo online acessível via web, permitindo consultas prévias por título, autor, categoria e status do livro |
 
 ---
 ## 2. Objetivos do Produto
 
 * **Geral:**
-  * Modernizar e automatizar a gestão operacional da Biblioteca Municipal sem interromper os atendimentos em andamento.
+  * Modernizar e automatizar a gestão operacional da Biblioteca sem interromper os atendimentos em andamento.
 * **Objetivos Específicos:**
   * Reduzir o tempo de registro de empréstimos e devoluções com leitor de código de barras.
   * Disponibilizar um catálogo online amigável para pesquisa pública de acervo em tempo real.
@@ -46,16 +46,16 @@
 * **Necessidades:**
   * Consultar pela internet se um livro específico está disponível antes de ir até a biblioteca.
   * Visualizar a sinopse, foto da capa e detalhes técnicos da obra.
-  * Receber lembretes antes do prazo de devolução vencer para evitar multas.
+  * Receber lembretes antes do prazo de devolução vencer para evitar bloqueios.
 * **Dores:**
-  * Perder tempo indo até a biblioteca física para descobrir que o livro necessário já foi emprestado.
-  * Esquecer a data de devolução por falta de aviso preventivo.
+  * Perder tempo indo até a biblioteca física para descobrir que o livro desejado já foi emprestado.
+  * Esquecer a data de devolução por falta de aviso preventivo e ser bloqueado.
 
 ---
 
 ## 4. Escopo Visual: Diagrama de Casos de Uso (UML)
 
-O diagrama abaixo sintetiza as interações entre os atores operacionais (Bibliotecário) e finais (Leitor) e os limites do Sistema de Gerenciamento de Biblioteca:
+O diagrama abaixo sintetiza as interações entre os atores operacionais (Bibliotecário) e finais (Usuários) e os limites do Sistema de Gerenciamento de Biblioteca:
 
 ![Diagrama de Casos de Uso](./caso-de-uso.png)
 
@@ -63,6 +63,6 @@ O diagrama abaixo sintetiza as interações entre os atores operacionais (Biblio
 
 ## 5. Modelagem de Processos de Negócio (BPMN)
 * **Fluxo de Empréstimo:**
-O diagrama abaixo ilustra o fluxo operacional de atendimento presencial no balcão da biblioteca, detalhando as interações entre o Leitor, a Bibliotecária e o Sistema de Gerenciamento durante a validação de regras de empréstimo:
+O diagrama abaixo ilustra o fluxo operacional de atendimento presencial no balcão da biblioteca, detalhando as interações entre o usuário, bibliotecário e o sistema de gerenciamento da biblioteca durante a validação de regras de empréstimo:
 
 ![Fluxo BPMN de Empréstimo](./bpmn-fluxo-emprestimo.png)
