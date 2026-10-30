@@ -10,8 +10,8 @@
 
 Este repositório contém a documentação completa de engenharia de requisitos para a modernização do **Sistema de Gerenciamento da Biblioteca Municipal (SGB)**. O projeto foi estruturado para substituir um sistema legado obsoleto e resolver gargalos operacionais, atendendo diretamente a dois perfis de usuários:
 
-* **Equipe da Biblioteca (Bibliotecários e Funcionários):** Otimizando a rotina de atendimento com automação de empréstimos e devoluções via leitura de código de barras, gestão automatizada de estoque e relatórios gerenciais.
-* **Leitores e Frequentadores:** Proporcionando autonomia através de um catálogo online responsivo para consulta em tempo real de disponibilidade de obras, sinopses e recebimento de alertas de prazos.
+* **Equipe da Biblioteca (Bibliotecários):** Otimizando a rotina de atendimento com automação de empréstimos e devoluções via leitura de código de barras, gestão automatizada de estoque e relatórios gerenciais.
+* **Usuários (Leitores e Frequentadores):** Proporcionando autonomia através de um catálogo online responsivo para consulta em tempo real de disponibilidade de obras, sinopses e recebimento de alertas de prazos.
 
 ---
 
@@ -40,21 +40,21 @@ Navegue pelos artefatos de requisitos através dos links abaixo:
 
 ## 📐 Modelagem de Caso de Uso (UML)
 
-Para visualizar as interações entre os atores (Cliente, Bibliotecário e TI) e o escopo do sistema, confira o diagrama abaixo:
+Para visualizar as interações entre os atores (Usuário e Bibliotecário) e o escopo do sistema, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./docs/caso-de-uso.png)
+![Diagrama de Casos de Uso](./docs/.png)
 
 ---
 
 ## 🔄 Fluxo de Processo de Negócio (BPMN)
 * **Fluxo de Empréstimo:**
-![Fluxo BPMN de Empréstimo](./docs/bpmn-fluxo-emprestimo.png)
+![Fluxo BPMN de Empréstimo](./docs/.png)
 
 ---
 
 ## 💡 Destaques de Engenharia de Requisitos Aplicados
 
-- **Especificação BDD (Behavior-Driven Development):** Critérios de aceitação escritos em sintaxe Gherkin (*Dado/Quando/Então*) para facilitar a ponte entre regra de negócio e testes automatizados.
+- **Especificação BDD:** Critérios de aceitação escritos em sintaxe Gherkin (*Dado/Quando/Então*) para facilitar a ponte entre regra de negócio e testes automatizados.
 - **Rastreabilidade End-to-End:** Matriz mapeando cada Necessidade de Negócio -> Requisito Funcional -> User Story -> Regras de Negócio.
 
 ---
