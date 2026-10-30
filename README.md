@@ -42,7 +42,7 @@ Navegue pelos artefatos de requisitos através dos links abaixo:
 
 Para visualizar as interações entre os atores (Usuário e Bibliotecário) e o escopo do sistema, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./docs/.png)
+![Diagrama de Casos de Uso](./docs/diagrama-caso-de-uso-sgb.png)
 
 ---
 
