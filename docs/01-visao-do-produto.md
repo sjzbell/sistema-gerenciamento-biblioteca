@@ -59,7 +59,7 @@
 
 O diagrama abaixo sintetiza as interações entre os atores operacionais (Bibliotecário) e finais (Usuários) e os limites do Sistema de Gerenciamento de Biblioteca:
 
-![Diagrama de Casos de Uso](./caso-de-uso.png)
+![Diagrama de Casos de Uso](./diagrama-caso-de-uso-sgb.png)
 
 ---
 
