@@ -1,24 +1,25 @@
-## 📊 Matriz de Rastreabilidade
+# 🔗 Matriz de Rastreabilidade de Requisitos
 
-| ID RF | Requisito Funcional | User Stories | Regras de Negócio / Observações |
-| :--- | :--- | :--- | :--- |
-| **RF1.1** | Cadastro de Novos Livros | **US01** | Validação de campos obrigatórios e controle de estoque inicial. |
-| **RF1.2** | Edição de Livros | **US02** | Atualização de dados cadastrais do acervo no banco de dados. |
-| **RF1.3** | Cadastro e Gestão de Leitores | **US03** | RNF04 (Acesso restrito), emissão de carteirinha e controle de acessos. |
-| **RF2.1** | Pesquisa Pública no Catálogo | **US04** | RNF02 (Usabilidade), RNF03 (Tempo < 2s) e RNF05 (Disponibilidade 99,5%). |
-| **RF2.2** | Detalhes e Status do Livro | **US05** | Exibição de sinopse, foto da capa e status em tempo real. |
-| **RF3.1** | Registro de Empréstimo e Devolução | **US06** | RNF06 (Leitor USB), RN01 (Máx. 3 livros), RN02 (14 dias) e RN03 (Bloqueio por atraso). |
-| **RF3.2** | Notificação Automática de Prazos | **US07** | RN02 e RN03 (Disparo automático de lembretes e avisos de pendência). |
-| **RF3.3** | Renovação do Empréstimo | **US08** | RN03 e RN04 (Máximo de 1 renovação online, sem atraso ou reservas). |
-| **RF4.1** | Registro Atualizado de Estoque | **US09** | Controle automático de entradas e saídas no banco de dados. |
-| **RF4.2** | Notificação Automática de Estoque | **US10** | Alerta no painel quando o estoque atingir o limite mínimo (1 unidade). |
-| **RF5.1** | Geração de Relatórios Gerenciais | **US11** | Compilação por período, frequência de leitores e livros populares. |
-| **RF5.2** | Consulta e Exportação de Relatórios | **US12** | RNF04 (Acesso por perfil de bibliotecário) e ordenação de tabelas em tela. |
+Esta matriz garante que todos os objetivos de negócio, regras e requisitos funcionais estejam perfeitamente mapeados e cobertos pelas Histórias de Usuário (User Stories) desenvolvidas no projeto.
+
+| Regra de Negócio / Escopo | Requisito Funcional (RF) | História de Usuário (US) | Descrição do Escopo Coberto | Status de Cobertura |
+| :--- | :--- | :--- | :--- | :--- |
+| **RN07 / Visão Geral** | **RF1.1** | **US01** | Cadastro de novos livros (título, autor, editora, ano, exemplares, corredor e prateleira). | ✅ Coberto |
+| **Visão Geral** | **RF1.2** | **US02** | Edição e atualização de informações e localizações de livros cadastrados. | ✅ Coberto |
+| **RN07** | **RF1.3 / RNF04** | **US03** | Cadastro de leitores, consulta de dados e emissão instantânea da carteirinha com código de barras. | ✅ Coberto |
+| **Visão Geral / RNF** | **RF2.1 / RNF02/03/05** | **US04** | Pesquisa pública no catálogo online com tempo de resposta inferior a 2s. | ✅ Coberto |
+| **Visão Geral** | **RF2.2** | **US05** | Visualização de detalhes da obra, sinopse, status e localização física (corredor/prateleira). | ✅ Coberto |
+| **RN05** | **RF2.3 / RF3.3** | **US11** | Reserva online de livros, prazo limite de 24h e controle de no-show / bloqueio de 45 dias. | ✅ Coberto |
+| **RN01, RN02, RN03, RN06** | **RF3.1 / RF3.2 / RNF01/06** | **US06** | Registro de empréstimo e devolução via leitor óptico de código de barras e validação de bloqueios. | ✅ Coberto |
+| **RN03, RN04** | **RF3.5** | **US07** | Renovação online de empréstimo pelo app respeitando travas de atraso e reservas pendentes. | ✅ Coberto |
+| **Visão Geral** | **RF4.1** | **US08** | Manutenção do registro atualizado de estoque em tempo real. | ✅ Coberto |
+| **Visão Geral** | **RF4.2** | **US09** | Notificação automática de estoque baixo para apoio à reposição. | ✅ Coberto |
+| **Visão Geral** | **RF5.1 / RF5.2** | **US10** | Geração e consulta de relatórios gerenciais e índice de no-show. | ✅ Coberto |
 
 ---
 
-## 💡 Legenda de Mapeamento
-- **ID RF:** Identificador único do Requisito Funcional.
-- **Requisito Funcional:** Título da funcionalidade especificada.
-- **User Stories:** Unidade de trabalho ágil (US01 a US12) associada à necessidade da persona.
-- **Regras de Negócio / Observações:** Condições operacionais (RNs) e Requisitos Não-Funcionais (RNFs) diretamente vinculados à entrega.
+📌 **Guia de Leitura da Matriz de Rastreabilidade (RTM):**
+> Esta matriz funciona como o mapa de consistência do projeto SGB. Ela assegura que **100% dos requisitos de negócio e funcionais** (definidos na Visão do Produto e na ERS) foram rigorosamente mapeados e cobertos pelas **Histórias de Usuário (User Stories)**. 
+> 
+> * **Status [✅ Coberto]:** Significa que o escopo possui o Requisito Funcional especificado e a respectiva História de Usuário com critérios de aceitação (BDD) prontos para desenvolvimento e testes.
+> * **Objetivo:** Garantir a transparência, evitar escopos paralelos e permitir que o time de desenvolvimento e QA compreendam a origem de cada funcionalidade do sistema.
