@@ -5,7 +5,7 @@
 
 | ID | Requisito Funcional | Descrição | Prioridade |
 | :--- | :--- | :--- | :--- |
-| **RF1.1** | Cadastro de Novos Livros | O sistema deve permitir o cadastro de novos livros contendo título, autor, editora, ano de publicação, quantidade de exemplares e a sua **localização física exata (corredor e prateleira)**. | Alta |
+| **RF1.1** | Cadastro de Novos Livros | O sistema deve permitir o cadastro de novos livros contendo título, autor, editora,edição, ano de publicação, gênero , quantidade de exemplares e a sua **localização física exata (corredor e prateleira)**. | Alta |
 | **RF1.2** | Edição de Livros | Os bibliotecários devem poder editar e atualizar informações e localizações de livros existentes. | Média |
 | **RF1.3** | Cadastro e Emissão de Carteirinha | O sistema deve permitir aos bibliotecários cadastrar novos leitores, consultar dados e **emitir instantaneamente a carteirinha física contendo o código de barras** vinculada ao perfil. | Alta |
 | **RF2.1** | Pesquisa Pública no Catálogo | O sistema deve disponibilizar um catálogo online acessível via web, onde os usuários possam pesquisar livros por título, autor, categoria e status de disponibilidade em tempo real. | Alta |
