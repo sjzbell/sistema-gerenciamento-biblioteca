@@ -55,16 +55,34 @@
 
 ---
 
-## 4. Escopo Visual: Diagrama de Casos de Uso (UML)
+## 4. Escopo Visual: Diagramas  (UML)
 
-O diagrama abaixo sintetiza as interações entre os atores operacionais (Bibliotecário) e finais (Usuários) e os limites do Sistema de Gerenciamento de Biblioteca:
+Os diagramas a seguir apresentam as diferentes visões de modelagem do Sistema de Gerenciamento de Biblioteca, abrangendo os aspectos comportamentais (Casos de Uso) e estruturais (Classes, Objetos e Componentes):
 
-![Diagrama de Casos de Uso](./diagrama-caso-de-uso-sgb.png)
+### Diagrama de Caso de Uso 
+Para visualizar as interações entre os atores (Usuário e Bibliotecário) e o escopo do sistema, confira o diagrama abaixo:
+
+![Diagrama de Casos de Uso](./Diagrama_de_Caso_de_Uso_SGB.png)
+
+### Diagrama de Classe 
+Para visualizar a estrutura estática do sistema, representando as classes, suas características e como elas se relacionam, confira o diagrama abaixo:
+
+![Diagrama de Casos de Uso](./Diagrama_de_Classe_SGB.png)
+
+### Diagrama de Objetos 
+Para visualizar o momento específico de execução do sistema, mostrando instâncias reais de classes e as ligações entre elas com dados e valores concretos, confira o diagrama abaixo:
+
+![Diagrama de Casos de Uso](./Diagrama_de_Objeto_SGB.png)
+
+### Diagrama de Componentes 
+Para visualizar a estrutura física e a organização do sistema, mostrando como diferentes partes (componentes) se conectam e dependem umas das outras, confira o diagrama abaixo:
+
+![Diagrama de Casos de Uso](./Diagrama_de_Componentes_SGB.png)
 
 ---
 
 ## 5. Modelagem de Processos de Negócio (BPMN)
 * **Fluxo de Empréstimo:**
-O diagrama abaixo ilustra o fluxo operacional de atendimento presencial no balcão da biblioteca, detalhando as interações entre o usuário, bibliotecário e o sistema de gerenciamento da biblioteca durante a validação de regras de empréstimo e devolução:
+O diagrama abaixo ilustra o fluxo operacional de atendimento presencial no balcão da biblioteca, detalhando as interações entre o usuário, bibliotecário e o sistema de gerenciamento da biblioteca durante a validação de regras de empréstimo e devolução: (em andamento)
 
-![Fluxo BPMN de Empréstimo](./bpmn-fluxo-emprestimo.png)
+
