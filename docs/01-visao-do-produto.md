@@ -62,22 +62,22 @@ Os diagramas a seguir apresentam as diferentes visões de modelagem do Sistema d
 ### Diagrama de Caso de Uso 
 Para visualizar as interações entre os atores (Usuário e Bibliotecário) e o escopo do sistema, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./Diagrama_de_Caso_de_Uso_SGB.png)
+![Diagrama de Casos de Uso](./diagrama_de_caso_de_uso.png)
 
 ### Diagrama de Classe 
 Para visualizar a estrutura estática do sistema, representando as classes, suas características e como elas se relacionam, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./Diagrama_de_Classe_SGB.png)
+![Diagrama de Casos de Uso](./diagrama_de_classes.png)
 
 ### Diagrama de Objetos 
 Para visualizar o momento específico de execução do sistema, mostrando instâncias reais de classes e as ligações entre elas com dados e valores concretos, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./Diagrama_de_Objeto_SGB.png)
+![Diagrama de Casos de Uso](./diagrama_de_objetos.png)
 
 ### Diagrama de Componentes 
 Para visualizar a estrutura física e a organização do sistema, mostrando como diferentes partes (componentes) se conectam e dependem umas das outras, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./Diagrama_de_Componentes_SGB.png)
+![Diagrama de Casos de Uso](./diagrama_de_componentes.png)
 
 ---
 
