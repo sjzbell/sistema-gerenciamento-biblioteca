@@ -63,8 +63,7 @@ Para visualizar as interações entre os atores (Usuário e Bibliotecário) e o 
 ---
 
 ## 🔄 Fluxo de Processo de Negócio (BPMN)
-* **Fluxo de Empréstimo:**
-![Fluxo BPMN de Empréstimo](./docs/.png)
+* **Fluxo de Empréstimo:** (em andamento)
 
 ---
 
