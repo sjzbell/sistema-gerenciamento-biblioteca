@@ -43,22 +43,22 @@ Navegue pelos artefatos de requisitos através dos links abaixo:
 ### Caso de Uso (UML)
 Para visualizar as interações entre os atores (Usuário e Bibliotecário) e o escopo do sistema, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./docs/Diagrama_de_Caso_de_Uso_SGB.png)
+![Diagrama de Casos de Uso](./docs/diagrama_de_caso_de_uso.png)
 
 ### Classe (UML)
 Para visualizar a estrutura estática do sistema, representando as classes, suas características e como elas se relacionam, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./docs/Diagrama_de_Classe_SGB.png)
+![Diagrama de Casos de Uso](./docs/diagrama_de_classes.png)
 
 ### Objetos (UML)
 Para visualizar o momento específico de execução do sistema, mostrando instâncias reais de classes e as ligações entre elas com dados e valores concretos, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./docs/Diagrama_de_Objeto_SGB.png)
+![Diagrama de Casos de Uso](./docs/diagrama_de_objetos.png)
 
 ### Componentes (UML)
 Para visualizar a estrutura física e a organização do sistema, mostrando como diferentes partes (componentes) se conectam e dependem umas das outras, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./docs/Diagrama_de_Componentes_SGB.png)
+![Diagrama de Casos de Uso](./docs/diagrama_de_componentes.png)
 
 ---
 
