@@ -62,25 +62,28 @@ Os diagramas a seguir apresentam as diferentes visões de modelagem do Sistema d
 ### Diagrama de Caso de Uso 
 Para visualizar as interações entre os atores (Usuário e Bibliotecário) e o escopo do sistema, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./diagrama_de_caso_de_uso.png)
+![Diagrama de Casos de Uso](./imagens/diagrama_caso_de_uso.png)
 
 ### Diagrama de Classe 
 Para visualizar a estrutura estática do sistema, representando as classes, suas características e como elas se relacionam, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./diagrama_de_classes.png)
+![Diagrama de Casos de Uso](./imagens/diagrama_de_classes.png)
 
 ### Diagrama de Objetos 
 Para visualizar o momento específico de execução do sistema, mostrando instâncias reais de classes e as ligações entre elas com dados e valores concretos, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./diagrama_de_objetos.png)
+![Diagrama de Casos de Uso](./imagens/diagrama_de_objetos.png)
 
 ### Diagrama de Componentes 
 Para visualizar a estrutura física e a organização do sistema, mostrando como diferentes partes (componentes) se conectam e dependem umas das outras, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./diagrama_de_componentes.png)
+![Diagrama de Casos de Uso](./imagens/diagrama_de_componentes.png)
 
 ---
 
 ## 5. Modelagem de Processos de Negócio (BPMN)
-* **Fluxo de Empréstimo:**
-O diagrama abaixo ilustra o fluxo operacional de atendimento presencial no balcão da biblioteca, detalhando as interações entre o usuário, bibliotecário e o sistema de gerenciamento da biblioteca durante a validação de regras de empréstimo e devolução: (em andamento)
+
+Como parte da evolução da engenharia de processos do sistema, esta etapa encontra-se **em andamento**. 
+
+- **Fase Atual — Priorização Estratégica:** Concluímos a etapa de levantamento e priorização utilizando a **Matriz Trade-Off** com os stakeholders, onde definimos que o foco principal do redesenho será a **Agilidade no atendimento** e a **Qualidade**.
+- **Próximos Passos (AS-IS e TO-BE):** A partir das diretrizes da matriz trade-off, iniciamos a modelagem dos fluxos operacionais para mapear o processo atual (**AS-IS**) e desenhar o fluxo otimizado (**TO-BE**) em BPMN, detalhando as interações entre o Leitor, o Bibliotecário e o SGB. *(em desenvolvimento)*
