@@ -63,7 +63,7 @@ Para visualizar a estrutura física e a organização do sistema, mostrando como
 ---
 
 ## 🔄 Mapeamento e Análise de Processos
-Para visualizar a evolução do projeto com a análise de processos (Matriz Trade-Off, AS-IS e TO-BE), acesse a pasta [Processos](./processos/).
+Para visualizar a evolução do projeto com a análise de processos (Matriz Trade-Off, AS-IS e TO-BE), acesse a pasta [Processos](./docs/processos/).
 
 ---
 
