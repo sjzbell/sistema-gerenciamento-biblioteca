@@ -43,7 +43,7 @@ Navegue pelos artefatos de requisitos através dos links abaixo:
 ### Caso de Uso (UML)
 Para visualizar as interações entre os atores (Usuário e Bibliotecário) e o escopo do sistema, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./docs/diagrama_de_caso_de_uso.png)
+![Diagrama de Casos de Uso](./docs/requisitos/imagens/diagrama_de_caso_de_uso.png)
 
 ### Classe (UML)
 Para visualizar a estrutura estática do sistema, representando as classes, suas características e como elas se relacionam, confira o diagrama abaixo:
