@@ -43,27 +43,27 @@ Navegue pelos artefatos de requisitos através dos links abaixo:
 ### Caso de Uso (UML)
 Para visualizar as interações entre os atores (Usuário e Bibliotecário) e o escopo do sistema, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./docs/requisitos/imagens/diagrama_de_caso_de_uso.png)
+![Diagrama de Casos de Uso](./docs/requisitos/imagens/diagrama_caso_de_uso.png)
 
 ### Classe (UML)
 Para visualizar a estrutura estática do sistema, representando as classes, suas características e como elas se relacionam, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./docs/diagrama_de_classes.png)
+![Diagrama de Casos de Uso](./docs/requisitos/imagens/diagrama_de_classes.png)
 
 ### Objetos (UML)
 Para visualizar o momento específico de execução do sistema, mostrando instâncias reais de classes e as ligações entre elas com dados e valores concretos, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./docs/diagrama_de_objetos.png)
+![Diagrama de Casos de Uso](./docs/requisitos/imagens/diagrama_de_objetos.png)
 
 ### Componentes (UML)
 Para visualizar a estrutura física e a organização do sistema, mostrando como diferentes partes (componentes) se conectam e dependem umas das outras, confira o diagrama abaixo:
 
-![Diagrama de Casos de Uso](./docs/diagrama_de_componentes.png)
+![Diagrama de Casos de Uso](./docs/requisitos/imagens/diagrama_de_componentes.png)
 
 ---
 
-## 🔄 Fluxo de Processo de Negócio (BPMN)
-* **Fluxo de Empréstimo:** (em andamento)
+## 🔄 Mapeamento e Análise de Processos
+Para visualizar a evolução do projeto com a análise de processos (Matriz Trade-Off, AS-IS e TO-BE), acesse a pasta [Processos](./processos/).
 
 ---
 
