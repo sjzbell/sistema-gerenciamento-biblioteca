@@ -17,7 +17,7 @@ Identificar, em conjunto com os usuários/stakeholders, quais dimensões crític
 
 ## 📈 Resultado da Matriz
 
-![Matriz Trade-Off](./imagens/matriz-trade-off.png)
+![Matriz Trade-Off](./imagens/matriz-trade-off-sgb.png)
 
 ### Ranking de Prioridades:
 1. **Agilidade (Média: 1,25)** - Foco principal na redução do tempo de espera do leitor no balcão.
